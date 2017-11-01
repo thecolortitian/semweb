@@ -1,0 +1,200 @@
+body{
+    background-color:#eeeeee;
+    font-family: 'Slabo 27px', serif;
+    padding:20px;
+}
+h2{
+    font-size:1.5em;
+    line-height: 1.5em;
+    padding:10px 0 20px 0;
+}
+p{
+    line-height: 1.5em;
+    padding:2px 0 5px 0;
+}
+
+/* task1 */
+
+.answers, .answers:visited{
+    padding:10px 20px;
+    color:#598e44;
+    background-color:#ffffff;
+    cursor:pointer;
+    border:1px solid #cccccc;
+    display:block;
+    clear:both;
+    width:160px;
+}
+.answers:hover, .answers:active{
+    padding:10px 20px;
+    color:#598e44;
+    background-color:#cccccc;
+}
+#answers{
+    margin-left:270px;
+    clear:both;
+    visibility: hidden;
+}
+#div1{
+    float: left;
+    width: 260px;
+    margin:10px 10px 10px 0;
+    padding: 8px;
+    min-height:50px;
+    border: 1px dashed #426833;
+    overflow:hidden;
+    zoom:1;
+    color: #ffffff;
+}
+#div2, #div3, #div4 {
+    float: left;
+    width: 260px;
+    height: 643px;
+    margin: 10px 10px 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #426833;
+    background-color: #598e44;
+    color: #ffffff;
+}
+#div_a{
+    float: left;
+    width: 260px;
+    min-height: 350px;
+    margin: 10px 10px 10px 0;
+    padding: 5px 15px;
+    border: 1px solid #426833;
+    background-color: #598e44;
+    color: #ffffff;
+}
+.draggable_txt{
+    overflow:hidden;
+    zoom:1;
+    border:1px solid #426833;
+    margin:8px 5px;
+    padding:2px 5px;
+    cursor:pointer;
+    background-color: #598e44;
+}
+
+/* task2 */
+.add, .add:visited{
+    padding:10px 20px;
+    cursor:pointer;
+    display:inline-block;
+    width:140px;
+}
+.add_class, .add_class:visited{ 
+    color:#ffffff;
+    background-color:#d3b543;
+    border:1px solid #9b8637;  
+}
+.add_class:hover, .add_class:active{
+    padding:10px 20px;
+    color:#ffffff;
+    background-color:#333;
+}
+.add_instance, .add_instance:visited{ 
+    color:#ffffff;
+    background-color:#b23985;
+    border:1px solid #671f6d;
+    
+}
+.add_instance:hover, .add_instance:active{
+    padding:10px 20px;
+    color:#ffffff;
+    background-color:#333;
+}
+#canvas{
+    float: left;
+    width: 95%;
+    margin:10px 10px 10px 0;
+    padding: 8px;
+    min-height:500px;
+    border: 1px dashed #426833;
+    color: #ffffff;
+}
+.drag{
+    color:#ffffff;
+    overflow:hidden;
+    zoom:1;
+    cursor:pointer;
+    min-width: 200px;
+    height: 35px;
+    padding: 2px 2px 2px 8px;
+    margin:5px;
+    float: left;
+    display: inline-block;
+ 
+}
+.name{
+    color:#ffffff;
+    text-decoration: none;
+    float:left;
+    margin:4px 4px 0 0;
+    width:100px;
+}
+.sub_b{
+    background-color:#ffffff;
+    padding:2px 8px;
+    color:#333;
+    text-decoration: none;
+    float:right;
+    margin:2px;
+}
+.sub_b:hover, .sub_b:active{
+    background-color:333;
+}
+.instance_b{
+    border:1px solid #671f6d; 
+}
+.class_b{
+    border:1px solid #9b8637;
+}
+.drag{
+    position:absolute;
+
+}
+.drag_instance{
+    color:#ffffff;
+    background-color:#b23985;
+    border:1px solid #671f6d;   
+}
+.drag_class{
+    color:#ffffff;
+    background-color:#d3b543;
+    border:1px solid #9b8637;
+}
+.input_name{
+    font-family: 'Slabo 27px', serif;
+    border:0;
+    opacity:0.8;
+    margin:4px 4px 0 0;
+    width:100px;
+}
+.input_name:focus{
+    outline:none;
+}
+.delete_all, .delete_all:visited{
+    color:#ffffff;
+    background-color:#b22e17;
+    border:1px solid #721c0d;
+    padding:10px 8px;
+    cursor: pointer;
+}
+.delete_all:hover, .delete_all:active, .download:hover, .download:active, .upload:hover, .upload:active{
+    background-color:#333;
+}
+.download, .download:visited{
+    color:#ffffff;
+    background-color:#598e44;
+    border:1px solid #426833;
+    padding:10px 8px;
+    cursor: pointer;
+}
+.upload, .upload:visited{
+    color:#ffffff;
+    background-color:#598e44;
+    border:1px solid #426833;
+    padding:10px 8px;
+    cursor: pointer;
+}

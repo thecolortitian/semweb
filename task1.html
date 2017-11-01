@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>WEBS2001 – Task 1</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/semweb.css">
+<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+    $('.answers').click('slow',function(){
+
+
+        if ($('#answers').css('visibility') == 'hidden')
+            $('#answers').css('visibility','visible');
+        else
+            $('#answers').css('visibility','hidden');
+
+        $("#show-background").click(function () {
+            $("#content-area").animate({opacity: 'toggle'}, 'slow'); 
+        });
+
+        // set button text
+        var text = $('.answers').text();
+        $('.answers').text(
+            text == "Hide our solution" ? "Show solution" : "Hide our solution");
+
+        // set position on page
+        var locat = location.href;
+
+        if (locat.slice(-10) == 'task1.html')
+            location.href = location.href + '#answers';
+        else
+            location.href = locat.slice(0,-8)   
+
+    });
+
+});
+
+</script>
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<h2>WEBS2001 Task 1 – which version of the Web? </h2>
+<p>Drag and drop the terms to the most appropriate incarnation of the Web.</p>
+<a class="answers">Show our solution</a>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag1'>Multimedia</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag2'>Dynamic HTML</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag3'>The (Social) Semantic Web</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag4'>Low technical skills to publish</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag5'>Primarily text, static images</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag6'>Read and write</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag7'>Multimedia</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag8'>Read, write, query</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag9'>The Web</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag10'>Need to know HTML to publish</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag11'>Re-usable data</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag12'>Low skills to publish</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag13'>Read only</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag14'>Document sharing</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag15'>The Social Web</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag16'>RDF</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag17'>Linking data (not just documents)</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag18'>Static HTML</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag19'>User-generated content</div>
+    <div class='draggable_txt' draggable='true' ondragstart='drag(event)' id='drag20'>Social networking</div>
+
+</div>
+
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"><h2>Web 1.0</h2></div>
+
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"><h2>Web 2.0</h2></div>
+
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"><h2>Web 3.0</h2></div>
+
+
+<div id="answers">
+    <a class="answers">Show our solution</a>
+
+    <div id="div_a"><h2>Web 1.0</h2>
+
+        <div class='draggable_txt'>The Web</div>
+        <div class='draggable_txt'>Read Only</div>
+        <div class='draggable_txt'>Document Sharing</div>
+        <div class='draggable_txt'>Static HTML</div>
+        <div class='draggable_txt'>Need to know HTML to publish</div>
+        <div class='draggable_txt'>Primarily text, static images</div>
+
+    </div>
+
+    <div id="div_a"><h2>Web 2.0</h2>
+
+        <div class='draggable_txt'>The Social Web</div>
+        <div class='draggable_txt'>Read and write</div>
+        <div class='draggable_txt'>User-generated content</div>
+        <div class='draggable_txt'>Social networking</div>
+        <div class='draggable_txt'>Dynamic HTML</div>
+        <div class='draggable_txt'>Low skills to publish</div>
+        <div class='draggable_txt'>Multimedia</div>
+
+    </div>
+
+    <div id="div_a"><h2>Web 3.0</h2>
+
+        <div class='draggable_txt'>The (Social) Semantic Web</div>
+        <div class='draggable_txt'>Read, write, query</div>
+        <div class='draggable_txt'>Linking data (not just documents)</div>
+        <div class='draggable_txt'>RDF</div>
+        <div class='draggable_txt'>Re-usable data</div>
+        <div class='draggable_txt'>Low technical skills to publish</div>
+        <div class='draggable_txt'>Multimedia</div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
